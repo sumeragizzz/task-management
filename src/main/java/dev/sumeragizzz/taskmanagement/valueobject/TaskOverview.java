@@ -8,10 +8,10 @@ public final class TaskOverview implements Serializable {
 
 	public static final TaskOverview BLANK = new TaskOverview("");
 
+	static final int MAX_LENGTH = 64;
+
 	@Serial
 	private static final long serialVersionUID = -7756688280903889755L;
-
-	private static final int MAX_LENGTH = 64;
 
 	private final String overview;
 
