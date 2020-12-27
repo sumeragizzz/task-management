@@ -1,4 +1,4 @@
-package dev.sumeragizzz.taskmanagement.valueobject;
+package dev.sumeragizzz.taskmanagement.domain.valueobject;
 
 import java.io.Serial;
 import java.io.Serializable;

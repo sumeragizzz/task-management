@@ -1,4 +1,4 @@
-package dev.sumeragizzz.taskmanagement.enumeration;
+package dev.sumeragizzz.taskmanagement.domain.enumeration;
 
 import java.util.Objects;
 import java.util.Optional;

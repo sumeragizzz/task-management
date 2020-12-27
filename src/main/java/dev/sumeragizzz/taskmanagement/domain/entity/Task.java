@@ -1,13 +1,13 @@
-package dev.sumeragizzz.taskmanagement.entity;
+package dev.sumeragizzz.taskmanagement.domain.entity;
 
 import java.io.Serial;
 import java.io.Serializable;
 
-import dev.sumeragizzz.taskmanagement.enumeration.TaskStatus;
-import dev.sumeragizzz.taskmanagement.valueobject.TaskCompletedDate;
-import dev.sumeragizzz.taskmanagement.valueobject.TaskCreatedDate;
-import dev.sumeragizzz.taskmanagement.valueobject.TaskDetails;
-import dev.sumeragizzz.taskmanagement.valueobject.TaskOverview;
+import dev.sumeragizzz.taskmanagement.domain.enumeration.TaskStatus;
+import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskCompletedDate;
+import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskCreatedDate;
+import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskDetails;
+import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskOverview;
 
 public class Task implements Serializable {
 
