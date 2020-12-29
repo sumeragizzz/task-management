@@ -4,8 +4,8 @@ import java.io.Serial;
 import java.io.Serializable;
 
 import dev.sumeragizzz.taskmanagement.domain.enumeration.TaskStatus;
-import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskCompletedDate;
-import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskCreatedDate;
+import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskCompletedDateTime;
+import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskCreatedDateTime;
 import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskDetails;
 import dev.sumeragizzz.taskmanagement.domain.valueobject.TaskOverview;
 
@@ -20,26 +20,26 @@ public class Task implements Serializable {
 
 	private TaskStatus status;
 
-	private final TaskCreatedDate createdDate;
+	private final TaskCreatedDateTime createdDateTime;
 
-	private TaskCompletedDate completedDate;
+	private TaskCompletedDateTime completedDateTime;
 
 	public Task() {
 		this.overview = TaskOverview.BLANK;
 		this.details = TaskDetails.BLANK;
 		this.status = TaskStatus.INCOMPLETE;
-		this.createdDate = new TaskCreatedDate();
-		this.completedDate = new TaskCompletedDate(createdDate);
+		this.createdDateTime = new TaskCreatedDateTime();
+		this.completedDateTime = new TaskCompletedDateTime(createdDateTime);
 	}
 
 	public void incomplete() {
 		status = TaskStatus.INCOMPLETE;
-		completedDate = completedDate.incomplete();
+		completedDateTime = completedDateTime.toIncomplete();
 	}
 
 	public void complete() {
 		status = TaskStatus.COMPLETED;
-		completedDate = completedDate.complete();
+		completedDateTime = completedDateTime.toComplete();
 	}
 
 	public TaskOverview getOverview() {
@@ -62,12 +62,12 @@ public class Task implements Serializable {
 		return status;
 	}
 
-	public TaskCreatedDate getCreatedDate() {
-		return createdDate;
+	public TaskCreatedDateTime getCreatedDateTime() {
+		return createdDateTime;
 	}
 
-	public TaskCompletedDate getCompletedDate() {
-		return completedDate;
+	public TaskCompletedDateTime getCompletedDateTime() {
+		return completedDateTime;
 	}
 
 }
