@@ -1,8 +1,11 @@
-package dev.sumeragizzz.taskmanagement.domain.valueobject;
+package dev.sumeragizzz.taskmanagement.domain.value;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
+
+import dev.sumeragizzz.taskmanagement.domain.value.TaskCompletedDateTime;
+import dev.sumeragizzz.taskmanagement.domain.value.TaskCreatedDateTime;
 
 class TaskCompletedDateTimeTest {
 

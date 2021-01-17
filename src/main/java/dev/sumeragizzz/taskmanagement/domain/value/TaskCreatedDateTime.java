@@ -1,4 +1,4 @@
-package dev.sumeragizzz.taskmanagement.domain.valueobject;
+package dev.sumeragizzz.taskmanagement.domain.value;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -8,12 +8,16 @@ import java.util.Objects;
 public final class TaskCreatedDateTime implements Serializable {
 
 	@Serial
-	private static final long serialVersionUID = 4879032373918845394L;
+	static final long serialVersionUID = 4879032373918845394L;
 
-	private final LocalDateTime createdDateTime;
+	final LocalDateTime createdDateTime;
 
 	public TaskCreatedDateTime() {
-		this.createdDateTime = LocalDateTime.now();
+		this(LocalDateTime.now());
+	}
+
+	public TaskCreatedDateTime(LocalDateTime createdDateTime) {
+		this.createdDateTime = Objects.requireNonNull(createdDateTime);
 	}
 
 	public LocalDateTime getCreatedDateTime() {

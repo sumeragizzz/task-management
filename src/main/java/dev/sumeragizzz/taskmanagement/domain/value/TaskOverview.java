@@ -1,4 +1,4 @@
-package dev.sumeragizzz.taskmanagement.domain.valueobject;
+package dev.sumeragizzz.taskmanagement.domain.value;
 
 import java.io.Serial;
 import java.io.Serializable;
@@ -8,18 +8,18 @@ public final class TaskOverview implements Serializable {
 
 	public static final TaskOverview BLANK = new TaskOverview("");
 
+	@Serial
+	static final long serialVersionUID = -7756688280903889755L;
+
 	static final int MAX_LENGTH = 64;
 
-	@Serial
-	private static final long serialVersionUID = -7756688280903889755L;
-
-	private final String overview;
+	final String overview;
 
 	public TaskOverview(String overview) {
 		this.overview = validate(overview);
 	}
 
-	private String validate(String overview) {
+	String validate(String overview) {
 		Objects.requireNonNull(overview);
 		if (overview.length() > MAX_LENGTH) {
 			throw new IllegalArgumentException();

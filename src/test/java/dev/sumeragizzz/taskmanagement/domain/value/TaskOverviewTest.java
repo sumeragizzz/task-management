@@ -1,9 +1,11 @@
-package dev.sumeragizzz.taskmanagement.domain.valueobject;
+package dev.sumeragizzz.taskmanagement.domain.value;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 import org.junit.jupiter.api.Test;
+
+import dev.sumeragizzz.taskmanagement.domain.value.TaskOverview;
 
 class TaskOverviewTest {
 
